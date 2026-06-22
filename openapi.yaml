@@ -1,0 +1,236 @@
+openapi: 3.0.3
+info:
+  title: Volume 5 Cognitive Architecture API
+  version: 1.0.0
+  description: >
+    OpenAPI specification for the Volume 5 Cognitive Architecture.
+    Exposes mode control, codec operations, reconstruction, validation,
+    and artifact generation endpoints for stateless, deterministic,
+    reconstructable reasoning systems.
+
+servers:
+  - url: https://api.volume5.local
+    description: Example Volume 5 endpoint (implementation-specific)
+
+paths:
+  /modes/select:
+    post:
+      summary: Select operational mode
+      description: >
+        Deterministically selects the operational mode (ND, Standard, Hybrid)
+        based on input conditions and invariants.
+      operationId: selectMode
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                inputSummary:
+                  type: string
+                  description: High-level description of the input or task.
+                ndProfile:
+                  type: boolean
+                  description: Whether the user or context is ND-profiled.
+                ambiguityLevel:
+                  type: string
+                  enum: [low, medium, high]
+                  description: Estimated ambiguity of the input.
+                reconstructionPriority:
+                  type: string
+                  enum: [low, medium, high]
+                  description: Priority for reconstruction fidelity.
+      responses:
+        '200':
+          description: Mode selection result
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  mode:
+                    type: string
+                    enum: [ND, Standard, Hybrid]
+                  rationale:
+                    type: string
+                  invariantChecks:
+                    type: array
+                    items:
+                      type: string
+
+  /codec/process:
+    post:
+      summary: Process a conceptual unit through the codec
+      description: >
+        Runs a conceptual unit through the five-stage Conceptual Codec:
+        Isolation, Mapping, Compression, Reinflation, Integration.
+      operationId: processCodec
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                rawConcept:
+                  type: string
+                  description: Nonlinear or unstructured conceptual input.
+                context:
+                  type: object
+                  additionalProperties: true
+                  description: Optional contextual metadata.
+      responses:
+        '200':
+          description: Codec processing result
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  isolatedConcept:
+                    type: string
+                  mapping:
+                    type: object
+                    additionalProperties: true
+                  compressedRepresentation:
+                    type: string
+                  reinflatedConcept:
+                    type: string
+                  integrationNotes:
+                    type: string
+
+  /reconstruction/trace:
+    post:
+      summary: Generate reconstruction trace
+      description: >
+        Produces a reconstruction trace for a reasoning sequence, including
+        mode decisions, codec steps, invariant checks, and output assembly.
+      operationId: generateReconstructionTrace
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                input:
+                  type: string
+                  description: Original input or prompt.
+                output:
+                  type: string
+                  description: Final system output.
+                artifacts:
+                  type: object
+                  additionalProperties: true
+                  description: Optional intermediate artifacts.
+      responses:
+        '200':
+          description: Reconstruction trace
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  modeTrace:
+                    type: array
+                    items:
+                      type: string
+                  codecTrace:
+                    type: array
+                    items:
+                      type: string
+                  invariantTrace:
+                    type: array
+                    items:
+                      type: string
+                  outputAssemblyTrace:
+                    type: array
+                    items:
+                      type: string
+
+  /validation/run:
+    post:
+      summary: Run validation suite
+      description: >
+        Runs validation checks to ensure determinism, invariant alignment,
+        drift resistance, and reconstruction fidelity.
+      operationId: runValidation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                testSetId:
+                  type: string
+                  description: Identifier for the validation test set.
+                strictMode:
+                  type: boolean
+                  description: Whether to enforce strict validation thresholds.
+      responses:
+        '200':
+          description: Validation results
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  passed:
+                    type: boolean
+                  failures:
+                    type: array
+                    items:
+                      type: string
+                  driftDetected:
+                    type: boolean
+                  notes:
+                    type: string
+
+  /artifacts/generate:
+    post:
+      summary: Generate reconstruction and runtime artifacts
+      description: >
+        Generates artifacts required for reconstruction, audit, and
+        deployment, including runtime maps and codec traces.
+      operationId: generateArtifacts
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                sessionId:
+                  type: string
+                  description: Identifier for the reasoning session.
+                includeRuntimeMaps:
+                  type: boolean
+                includeCodecTraces:
+                  type: boolean
+                includeInvariantReports:
+                  type: boolean
+      responses:
+        '200':
+          description: Artifact generation result
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  artifacts:
+                    type: object
+                    additionalProperties: true
+                  summary:
+                    type: string
+
+components:
+  schemas:
+    ErrorResponse:
+      type: object
+      properties:
+        message:
+          type: string
+        details:
+          type: string
