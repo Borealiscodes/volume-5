@@ -1,3 +1,10 @@
+# This repository is archived
+
+This project has been deprecated to prevent confusion.
+
+The active, maintained version is here:
+https://github.com/Borealiscodes/unified-meta-architecture
+
 # Atlas Architecture (Volumes 5–7)
 
 A unified cognitive architecture defining:
