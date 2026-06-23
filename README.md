@@ -241,7 +241,3 @@ Developers should use this template when they want to:
 - start from a validated reference implementation  
 
 This makes the architecture portable, consistent, and easy to extend.
-
----
-
-If you want, I can also generate a **CONTRIBUTING.md** that references Template Mode, or a **Repository Usage Guide** that explains how to build from the template.
