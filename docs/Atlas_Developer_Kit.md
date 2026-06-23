@@ -1,4 +1,7 @@
+[Home](index.md) • [Stability](V6_Stability_Spec.md) • [Governance](V7_Governance_Spec.md) • [Developer Kit](Atlas_Developer_Kit.md) • [Runtime Maps](Runtime_Maps.md) • [Integration Notes](Integration_Notes.md)
+---
 # Atlas Developer Kit
+
 
 ## Purpose
 The Atlas is the navigation layer for the architecture. It explains the conceptual structure, relationships, and usage patterns of V5–V7. It is descriptive, not authoritative.
