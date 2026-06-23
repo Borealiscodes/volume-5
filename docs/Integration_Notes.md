@@ -1,4 +1,7 @@
+[Home](index.md) • [Stability](V6_Stability_Spec.md) • [Governance](V7_Governance_Spec.md) • [Developer Kit](Atlas_Developer_Kit.md) • [Runtime Maps](Runtime_Maps.md) • [Integration Notes](Integration_Notes.md)
+---
 # Integration Notes
+
 
 ## Purpose
 These notes guide external systems, tools, or services integrating with the architecture. They describe how to interact with V5 mechanics, V6 stability constraints, and V7 governance rules without violating boundaries.
