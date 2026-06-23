@@ -1,4 +1,7 @@
+[Home](index.md) • [Stability](V6_Stability_Spec.md) • [Governance](V7_Governance_Spec.md) • [Developer Kit](Atlas_Developer_Kit.md) • [Runtime Maps](Runtime_Maps.md) • [Integration Notes](Integration_Notes.md)
+---
 # V7 Governance Specification
+
 
 ## Purpose
 V7 defines what is allowed to operate within the architecture. It is the authority layer that sets boundaries, permissions, and prohibitions.
