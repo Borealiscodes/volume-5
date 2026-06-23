@@ -1,55 +1,108 @@
-# Contributing to Volume 5
+# Contributing to Atlas‑Architecture
 
-Thank you for your interest in contributing to the Volume 5 Cognitive Architecture.
-
-All contributions must comply with the architecture’s invariants, deterministic
-requirements, and reconstruction guarantees.
-
----
-
-# 1. Contribution Requirements
-
-- All changes must be deterministic.
-- No contribution may introduce hidden state.
-- All reasoning must be reconstructable.
-- All modifications must preserve invariant alignment.
-- All codec operations must remain drift-free.
+Thank you for your interest in contributing.  
+This repository defines the reference structure, specifications, and developer kit for the Atlas Architecture (Volumes 5–7).  
+Contributions must preserve architectural integrity, stability constraints, and governance boundaries.
 
 ---
 
-# 2. Workflow
+## 1. Contribution Principles
 
-1. Fork the repository.
-2. Create a feature branch.
-3. Ensure all validation tests pass.
-4. Submit a pull request with:
-   - description of changes
-   - rationale
-   - reconstruction artifacts
-   - validation results
+All contributions must align with:
 
----
+- **V5 Mechanics** — deterministic operations and clear workflows  
+- **V6 Stability** — invariants, constraints, and non‑drifting structure  
+- **V7 Governance** — rules, permissions, and escalation boundaries  
 
-# 3. Prohibited Changes
-
-- altering invariants
-- introducing nondeterministic behavior
-- modifying runtime maps without justification
-- bypassing reconstruction requirements
+Changes that violate layer separation or introduce ambiguity will not be accepted.
 
 ---
 
-# 4. Review Process
+## 2. Types of Accepted Contributions
 
-All pull requests undergo:
+You may contribute:
 
-- invariant review
-- determinism review
-- codec integrity review
-- reconstruction audit
+- Documentation improvements  
+- Clarifications to specifications  
+- Additional runtime maps  
+- Integration examples  
+- Stability or governance test cases  
+- Template‑mode enhancements  
+- Developer‑focused explanations or diagrams  
 
-Only contributions that pass all reviews will be merged.
+You may **not** contribute:
+
+- New architectural layers  
+- Changes that alter V5/V6/V7 definitions  
+- Features that collapse layer boundaries  
+- Unstable or speculative mechanisms  
 
 ---
 
-# End of CONTRIBUTING Guidelines
+## 3. Repository Structure Requirements
+
+All contributions must preserve:
+
+- directory layout  
+- naming conventions  
+- file roles  
+- separation of concerns  
+- deterministic expansion paths  
+
+If adding new files, place them in the correct domain:
+
+- `docs/` — specifications, guides, diagrams  
+- `developer-kit/` — onboarding and terminology  
+- `runtime-maps/` — flow diagrams and execution paths  
+- `validation/` — tests, sufficiency checks, stability proofs  
+
+---
+
+## 4. Template Repository Usage
+
+This repository is configured as a **Template Repository**.  
+Contributors may propose improvements that:
+
+- strengthen reproducibility  
+- improve clarity for template‑generated projects  
+- enhance developer onboarding  
+- maintain alignment with V5–V7  
+
+Template mode must not be altered or disabled without governance review.
+
+---
+
+## 5. How to Submit Changes
+
+1. Fork the repository  
+2. Create a feature branch  
+3. Make your changes  
+4. Ensure all documents remain stable and non‑drifting  
+5. Submit a pull request with a clear explanation of:  
+   - what changed  
+   - why it changed  
+   - which layer(s) it affects  
+   - how stability and governance were preserved  
+
+Pull requests that do not include this information will be returned for revision.
+
+---
+
+## 6. Code of Conduct
+
+All contributors must maintain:
+
+- clarity  
+- respect  
+- precision  
+- architectural discipline  
+
+This project values correctness over speed and stability over novelty.
+
+---
+
+## 7. Questions
+
+For questions about structure, invariants, or integration, open a **Discussion** rather than an Issue.
+
+Thank you for helping maintain the integrity of the Atlas Architecture.
