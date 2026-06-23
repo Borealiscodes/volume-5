@@ -183,4 +183,65 @@ The creation data demonstrates that the architecture is:
 - losslessly expandable  
 - internally consistent  
 
-This constitutes a full validation of the architecture’s design.
+
+# ⭐ Appendix B — Template Mode
+
+## Purpose of Template Mode  
+Template Mode allows this repository to function as a **starter architecture**. When enabled, GitHub adds a **“Use this template”** button that lets developers instantly generate a **new repository** containing the same:
+
+- directory structure  
+- specifications  
+- developer kit  
+- runtime maps  
+- integration notes  
+
+The generated repository does **not** include commit history, ensuring a clean starting point.
+
+---
+
+## Why Template Mode Is Enabled  
+The Atlas Architecture is designed to be:
+
+- reproducible  
+- stable  
+- deterministic  
+- governance‑aligned  
+- easy to integrate with  
+
+Template Mode supports these goals by allowing developers to:
+
+- create new architecture‑aligned projects  
+- build implementations that follow the same constraints  
+- maintain consistent structure across derived systems  
+- start from a validated, stable foundation  
+
+This makes the architecture easier to adopt and ensures structural consistency across implementations.
+
+---
+
+## What Template Mode Does *Not* Do  
+Template Mode does **not**:
+
+- modify the repository  
+- change governance or stability rules  
+- expose private data  
+- allow others to edit this repo  
+- copy commit history  
+
+It simply provides a **clean, reproducible scaffold** for new projects.
+
+---
+
+## When to Use This Template  
+Developers should use this template when they want to:
+
+- build a system aligned with the V5–V7 architecture  
+- create a new project with the same structural foundation  
+- ensure compliance with the stability and governance constraints  
+- start from a validated reference implementation  
+
+This makes the architecture portable, consistent, and easy to extend.
+
+---
+
+If you want, I can also generate a **CONTRIBUTING.md** that references Template Mode, or a **Repository Usage Guide** that explains how to build from the template.
