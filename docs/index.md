@@ -1,4 +1,9 @@
-# Atlas Architecture (Volumes 5–7)
+---
+title: Atlas Architecture Documentation
+description: Volumes 5–7 – Mechanics, Stability, Governance
+---
+[Home](index.md) • [Stability](V6_Stability_Spec.md) • [Governance](V7_Governance_Spec.md) • [Developer Kit](Atlas_Developer_Kit.md) • [Runtime Maps](Runtime_Maps.md) • [Integration Notes](Integration_Notes.md)
+---
 
 A unified cognitive architecture defining:
 - **V5 Mechanics** — deterministic operations  
